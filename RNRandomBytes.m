@@ -21,10 +21,9 @@ RCT_EXPORT_MODULE()
 
 @synthesize bridge = _bridge;
 
-RCT_EXPORT_METHOD(randomBytes:(NSUInteger)length
-                  callback:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(randomBytesSync:(NSUInteger)length)
 {
-    callback(@[[NSNull null], [self randomBytes:length]]);
+  return [self randomBytes:length];
 }
 
 - (NSString *) randomBytes:(NSUInteger)length
