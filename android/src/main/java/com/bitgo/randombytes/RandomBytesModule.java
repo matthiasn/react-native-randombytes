@@ -24,9 +24,9 @@ class RandomBytesModule extends ReactContextBaseJavaModule {
     return "RNRandomBytes";
   }
 
-  @ReactMethod
-  public void randomBytes(int size, Callback success) {
-    success.invoke(null, getRandomBytes(size));
+  @ReactMethod(isBlockingSynchronousMethod = true)
+  public String randomBytesSync(int size) {
+    return getRandomBytes(size);
   }
 
   @Override

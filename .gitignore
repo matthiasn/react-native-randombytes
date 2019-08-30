@@ -29,7 +29,11 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-      
+*.lock
+package-lock.json
+gradle/
+gradlew
+gradlew.bat
 
 # Android/IntelliJ
 #
@@ -43,4 +47,3 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
-      
